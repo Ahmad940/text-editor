@@ -4,6 +4,9 @@ dependencies:
   '@popperjs/core':
     specifier: ^2.11.8
     version: 2.11.8
+  '@tiptap/extension-character-count':
+    specifier: ^2.1.3
+    version: 2.1.3(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3)
   '@tiptap/extension-color':
     specifier: ^2.1.3
     version: 2.1.3(@tiptap/core@2.1.3)(@tiptap/extension-text-style@2.1.3)
@@ -31,6 +34,9 @@ dependencies:
   '@tiptap/extension-text-style':
     specifier: ^2.1.3
     version: 2.1.3(@tiptap/core@2.1.3)
+  '@tiptap/extension-youtube':
+    specifier: ^2.1.6
+    version: 2.1.6(@tiptap/core@2.1.3)
   '@tiptap/pm':
     specifier: ^2.1.3
     version: 2.1.3
@@ -61,18 +67,21 @@ dependencies:
   next:
     specifier: 13.4.18
     version: 13.4.18(react-dom@18.2.0)(react@18.2.0)
-  postcss:
-    specifier: 8.4.28
-    version: 8.4.28
   react:
     specifier: 18.2.0
     version: 18.2.0
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  react-dropzone:
+    specifier: ^14.2.3
+    version: 14.2.3(react@18.2.0)
   react-icons:
     specifier: ^4.10.1
     version: 4.10.1(react@18.2.0)
+  react-popper:
+    specifier: ^2.3.0
+    version: 2.3.0(@popperjs/core@2.11.8)(react-dom@18.2.0)(react@18.2.0)
   tailwindcss:
     specifier: 3.3.3
     version: 3.3.3
@@ -84,6 +93,9 @@ devDependencies:
   '@tailwindcss/typography':
     specifier: ^0.5.9
     version: 0.5.9(tailwindcss@3.3.3)
+  postcss:
+    specifier: 8.4.28
+    version: 8.4.28
 
 packages:
 
@@ -391,6 +403,16 @@ packages:
       '@tiptap/core': 2.1.3(@tiptap/pm@2.1.3)
     dev: false
 
+  /@tiptap/extension-character-count@2.1.3(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3):
+    resolution: {integrity: sha512-Q3al2hk9ebdd0GVWg0LReTo9UMwwGgIzbYUN3PwKKjPzYd30gHZU4ssubMmUE+fdS2MJrPB+j5W/KPpKnsdMgQ==}
+    peerDependencies:
+      '@tiptap/core': ^2.0.0
+      '@tiptap/pm': ^2.0.0
+    dependencies:
+      '@tiptap/core': 2.1.3(@tiptap/pm@2.1.3)
+      '@tiptap/pm': 2.1.3
+    dev: false
+
   /@tiptap/extension-code-block@2.1.3(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3):
     resolution: {integrity: sha512-SAKvBPxQj7FpaUvcdltATIpzdsDbKgLOhVWQ79cq9wGeGtX1AzBLKQMQjX3bUos+kRauQdwbUMNwvRbjCgalgA==}
     peerDependencies:
@@ -599,6 +621,14 @@ packages:
 
   /@tiptap/extension-text@2.1.3(@tiptap/core@2.1.3):
     resolution: {integrity: sha512-wPOofXlCeiw1oPiHJ7gzoFMRY9k81gOYO8/zOdORE91YoTSEgKNYdKirIWPohRe3TOn8Ekb1kJASTe/O/SVRkg==}
+    peerDependencies:
+      '@tiptap/core': ^2.0.0
+    dependencies:
+      '@tiptap/core': 2.1.3(@tiptap/pm@2.1.3)
+    dev: false
+
+  /@tiptap/extension-youtube@2.1.6(@tiptap/core@2.1.3):
+    resolution: {integrity: sha512-jTcV6Mr1bYjzf9Vll5PhlA/qXSdmH/iGKg1iZo956qHQvmakz5/OPlmaauyqZGNvXDg9J5kkzfwibXCIe6enwQ==}
     peerDependencies:
       '@tiptap/core': ^2.0.0
     dependencies:
@@ -917,6 +947,11 @@ packages:
     resolution: {integrity: sha512-wwHYEIS0Q80f5mosx3L/dfG5t5rjEa9Ft51GTaNt862EnpyGHpgz2RkZvLPp1oF5TnAiTohkEKVEu8pQPJI7Vg==}
     dependencies:
       has-symbols: 1.0.3
+    dev: false
+
+  /attr-accept@2.2.2:
+    resolution: {integrity: sha512-7prDjvt9HmqiZ0cl5CRjtS84sEyhsHP2coDkaZKRKVfCDo9s7iw7ChVmar78Gu9pC4SoR/28wFu/G5JJhTnqEg==}
+    engines: {node: '>=4'}
     dev: false
 
   /autoprefixer@10.4.15(postcss@8.4.28):
@@ -1585,6 +1620,13 @@ packages:
     engines: {node: ^10.12.0 || >=12.0.0}
     dependencies:
       flat-cache: 3.0.4
+    dev: false
+
+  /file-selector@0.6.0:
+    resolution: {integrity: sha512-QlZ5yJC0VxHxQQsQhXvBaC7VRJ2uaxTf+Tfpu4Z/OcVQJVpZO+DGU0rkoVW5ce2SccxugvpBJoMvUs59iILYdw==}
+    engines: {node: '>= 12'}
+    dependencies:
+      tslib: 2.6.1
     dev: false
 
   /fill-range@7.0.1:
@@ -2668,6 +2710,22 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-dropzone@14.2.3(react@18.2.0):
+    resolution: {integrity: sha512-O3om8I+PkFKbxCukfIR3QAGftYXDZfOE2N1mr/7qebQJHs7U+/RSL/9xomJNpRg9kM5h9soQSdf0Gc7OHF5Fug==}
+    engines: {node: '>= 10.13'}
+    peerDependencies:
+      react: '>= 16.8 || 18.0.0'
+    dependencies:
+      attr-accept: 2.2.2
+      file-selector: 0.6.0
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
+
+  /react-fast-compare@3.2.2:
+    resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
+    dev: false
+
   /react-icons@4.10.1(react@18.2.0):
     resolution: {integrity: sha512-/ngzDP/77tlCfqthiiGNZeYFACw85fUjZtLbedmJ5DTlNDIwETxhwBzdOJ21zj4iJdvc0J3y7yOsX3PpxAJzrw==}
     peerDependencies:
@@ -2678,6 +2736,20 @@ packages:
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+    dev: false
+
+  /react-popper@2.3.0(@popperjs/core@2.11.8)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-e1hj8lL3uM+sgSR4Lxzn5h1GxBlpa4CQz0XLF8kx4MDrDRWY0Ena4c97PUeSX9i5W3UAfDP0z0FXCTQkoXUl3Q==}
+    peerDependencies:
+      '@popperjs/core': ^2.0.0
+      react: ^16.8.0 || ^17 || ^18
+      react-dom: ^16.8.0 || ^17 || ^18
+    dependencies:
+      '@popperjs/core': 2.11.8
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-fast-compare: 3.2.2
+      warning: 4.0.3
     dev: false
 
   /react@18.2.0:
@@ -3124,6 +3196,12 @@ packages:
 
   /w3c-keyname@2.2.8:
     resolution: {integrity: sha512-dpojBhNsCNN7T82Tm7k26A6G9ML3NkhDsnw9n/eoxSRlVBB4CEtIQ/KTCLI2Fwf3ataSXRhYFkQi3SlnFwPvPQ==}
+    dev: false
+
+  /warning@4.0.3:
+    resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
+    dependencies:
+      loose-envify: 1.4.0
     dev: false
 
   /watchpack@2.4.0:

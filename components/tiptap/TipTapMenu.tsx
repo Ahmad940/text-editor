@@ -12,7 +12,6 @@ import {
   RiFormatClear,
   RiH1,
   RiH2,
-  RiImage2Fill,
   RiItalic,
   RiLink,
   RiLinkUnlink,
@@ -25,6 +24,7 @@ import {
   RiTextWrap,
 } from 'react-icons/ri'
 import TipTapMenuButton from './TipTapMenuButton'
+import TipTapImagePlugin from './plugins/TipTapImagePlugin'
 
 interface menuProps {
   editor: Editor | null
@@ -51,14 +51,6 @@ const TipTapMenu = ({ editor }: menuProps) => {
 
     // update link
     editor?.chain().focus().extendMarkRange('link').setLink({ href: url }).run()
-  }, [editor])
-
-  const addImage = useCallback(() => {
-    const url = window.prompt('URL')
-
-    if (url) {
-      editor?.chain().focus().setImage({ src: url }).run()
-    }
   }, [editor])
 
   const Separator = () => (
@@ -118,9 +110,7 @@ const TipTapMenu = ({ editor }: menuProps) => {
       </TipTapMenuButton>
 
       {/* Image */}
-      <TipTapMenuButton onClick={addImage} tooltip='Add Image'>
-        <RiImage2Fill className={`${iconClass}`} />
-      </TipTapMenuButton>
+      <TipTapImagePlugin editor={editor} iconClass={iconClass} />
 
       <Separator />
 

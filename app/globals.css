@@ -2,43 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .editor {
-  @apply prose dark:prose-invert focus:outline-none text-gray-600 leading-none;
-  /* @apply prose dark:prose-invert prose-sm sm:prose-base lg:prose-lg xl:prose-2xl focus:outline-none; */
+  @apply prose focus:outline-none text-gray-600 leading-none;
+  /* @apply prose prose-sm sm:prose-base lg:prose-lg xl:prose-2xl focus:outline-none; */
 }
 
 ul[data-type='taskList'] {
-  list-style: none !important;
-  padding: 0 !important;
-}
- 
-ul[data-type='taskList'] p {
-  margin: 0 !important;
+  list-style: none;
+  padding: 0;
+
+  p {
+    margin: 0;
+  }
+
+  li {
+    display: flex;
+
+    > label {
+      flex: 0 0 auto;
+      margin-right: 0.5rem;
+      user-select: none;
+    }
+
+    > div {
+      flex: 1 1 auto;
+    }
+
+    ul li,
+    ol li {
+      display: list-item;
+    }
+
+    ul[data-type='taskList'] > li {
+      display: flex;
+    }
+  }
 }
 
-ul[data-type='taskList'] li {
-  display: flex !important;
-}
+.ProseMirror {
+  a {
+    @apply text-blue-400 font-normal;
+  }
 
-ul[data-type='taskList'] li>label {
-  flex: 0 0 auto !important;
-  margin-right: 0.5rem !important;
-  user-select: none !important;
-}
+  p.is-editor-empty:first-child::before {
+    color: #adb5bd;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
 
-ul[data-type='taskList'] li>div {
-  flex: 1 1 auto !important;
-}
-
-.ProseMirror a {
-  @apply text-blue-400 font-normal;
-}
-
-.ProseMirror p.is-editor-empty:first-child::before {
-  color: #adb5bd;
-  content: attr(data-placeholder);
-  float: left;
-  height: 0;
-  pointer-events: none;
+    .dropzone-form {
+      @apply p-5 border border-gray-200;
+    }
+  }
 }
