@@ -24,7 +24,7 @@ const TipTapMenuButton = ({
         disabled={disabled}
         className={`px-1 py-1 rounded-md ${
           isActive && 'bg-gray-400 text-white'
-        } hover:bg-gray-500 ${className}`}
+        } hover:bg-gray-300 ${className}`}
       >
         {children}
       </button>

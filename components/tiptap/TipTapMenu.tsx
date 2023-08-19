@@ -31,7 +31,7 @@ interface menuProps {
 }
 
 const TipTapMenu = ({ editor }: menuProps) => {
-  const iconClass = 'h-5 w-5 fill-white'
+  const iconClass = 'h-5 w-5 fill-black'
 
   const setLink = useCallback(() => {
     const previousUrl = editor?.getAttributes('link').href
@@ -54,11 +54,11 @@ const TipTapMenu = ({ editor }: menuProps) => {
   }, [editor])
 
   const Separator = () => (
-    <div className='bg-[#ffffff40] h-[1.25rem] w-[1px] ml-[.5rem] mr-[.5rem]'></div>
+    <div className='bg-[#a8a8a8] h-[1.25rem] w-[1px] ml-[.5rem] mr-[.5rem]'></div>
   )
 
   return (
-    <div className='bg-neutral-500 rounded-xl flex flex-row flex-wrap items-center px-1 py-2 sticky'>
+    <div className='bg-white w-fit rounded-xl flex flex-row flex-wrap items-center px-1 py-2 sticky border shadow-sm'>
       {/* Paragraph */}
       <TipTapMenuButton
         onClick={() => editor?.chain().focus().setParagraph()}
