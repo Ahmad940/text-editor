@@ -14,10 +14,10 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex flex-row flex-1 items-center justify-between px-10 bg-indigo-500 h-12'>
-        <p className='text-white font-bold'>Wazobia Editor</p>
+      <div className='flex flex-row flex-1 items-center justify-between px-5 bg-indigo-500 h-12'>
+        <p className='text-white font-bold'>Editor</p>
 
-        <div>
+        <div className='flex flex-row items-center'>
           {/* Editor tab button */}
           <NavButton
             active={activeTab == 'EDITOR'}
