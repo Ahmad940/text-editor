@@ -50,9 +50,9 @@ ul[data-type='taskList'] {
     float: left;
     height: 0;
     pointer-events: none;
-
-    .dropzone-form {
-      @apply p-5 border border-gray-200;
-    }
   }
+}
+
+.dropzone-form {
+  @apply p-5 mt-1 border border-dashed border-green-500;
 }

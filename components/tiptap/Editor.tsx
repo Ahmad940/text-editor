@@ -81,8 +81,8 @@ const TipTapEditor = ({
   }
 
   return (
-    <div className='border pt-5 rounded-md bg-[#fafafa] relative'>
-      <div className='px-3 pb-10 relative overflow-hidden'>
+    <div className='border pt-5 rounded-md bg-[#fafafa]'>
+      <div className='px-3 pb-10 overflow-hidden'>
         <input
           type='text'
           className='mb-3 outline-none font-semibold text-lg w-full pr-12'

@@ -14,10 +14,10 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex flex-row'>
-        <div className='flex-[0.2] bg-indigo-500 h-screen pt-10'>
-          <p className='text-white mb-5 ml-4 font-bold'>Wazobia Editor</p>
+      <div className='flex flex-row flex-1 items-center justify-between px-10 bg-indigo-500 h-12'>
+        <p className='text-white font-bold'>Wazobia Editor</p>
 
+        <div>
           {/* Editor tab button */}
           <NavButton
             active={activeTab == 'EDITOR'}
@@ -34,29 +34,29 @@ export default function Home() {
             Result
           </NavButton>
         </div>
+      </div>
 
-        <div className='flex-1'>
-          {activeTab === 'EDITOR' && (
-            <div>
-              <TipTapEditor
-                setEditorContent={setEditorContent}
-                setEditorTitle={setEditorTitle}
-                placeholder='Write Something'
-                initialContent={editorContent}
-                initialTitle={editorTitle}
-              />
-            </div>
-          )}
+      <div className=''>
+        {activeTab === 'EDITOR' && (
+          <div>
+            <TipTapEditor
+              setEditorContent={setEditorContent}
+              setEditorTitle={setEditorTitle}
+              placeholder='Write Something'
+              initialContent={editorContent}
+              initialTitle={editorTitle}
+            />
+          </div>
+        )}
 
-          {activeTab === 'RESULT' && (
-            <div className='pt-5 px-10'>
-              <p className='font-bold text-3xl'>{editorTitle}</p>
-              <div className='mt-5'>
-                <RenderTipTapHtml __html={editorContent} />
-              </div>
+        {activeTab === 'RESULT' && (
+          <div className='pt-5 px-10'>
+            <p className='font-bold text-3xl'>{editorTitle}</p>
+            <div className='mt-5'>
+              <RenderTipTapHtml __html={editorContent} />
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </>
   )

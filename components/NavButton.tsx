@@ -9,8 +9,8 @@ interface NavButtonProps {
 const NavButton = ({ children, active, onClick }: NavButtonProps) => {
   return (
     <button
-      className={`w-full text-left px-4 py-2 text-white mb-1 ${
-        active && 'bg-neutral-500'
+      className={`w-fit text-left px-4 py-3 rounded-md text-white hover:bg-indigo-600 mr-2 ${
+        active && 'bg-indigo-700'
       }`}
       onClick={onClick}
     >
