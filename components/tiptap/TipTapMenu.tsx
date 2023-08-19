@@ -58,7 +58,7 @@ const TipTapMenu = ({ editor }: menuProps) => {
   )
 
   return (
-    <div className='bg-neutral-500 rounded-t-xl flex flex-row flex-wrap items-center px-1 py-1 pt-2 sticky'>
+    <div className='bg-neutral-500 rounded-xl flex flex-row flex-wrap items-center px-1 py-2 sticky'>
       {/* Paragraph */}
       <TipTapMenuButton
         onClick={() => editor?.chain().focus().setParagraph()}

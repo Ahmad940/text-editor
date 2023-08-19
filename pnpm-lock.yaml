@@ -4,12 +4,18 @@ dependencies:
   '@popperjs/core':
     specifier: ^2.11.8
     version: 2.11.8
+  '@tiptap/extension-bubble-menu':
+    specifier: ^2.1.6
+    version: 2.1.6(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3)
   '@tiptap/extension-character-count':
     specifier: ^2.1.3
     version: 2.1.3(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3)
   '@tiptap/extension-color':
     specifier: ^2.1.3
     version: 2.1.3(@tiptap/core@2.1.3)(@tiptap/extension-text-style@2.1.3)
+  '@tiptap/extension-floating-menu':
+    specifier: ^2.1.6
+    version: 2.1.6(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3)
   '@tiptap/extension-image':
     specifier: ^2.1.3
     version: 2.1.3(@tiptap/core@2.1.3)
@@ -384,8 +390,8 @@ packages:
       '@tiptap/core': 2.1.3(@tiptap/pm@2.1.3)
     dev: false
 
-  /@tiptap/extension-bubble-menu@2.1.3(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3):
-    resolution: {integrity: sha512-Fv6BguXCO0o0ak2HtHh237B20qNFHWRi9567ySPe0nVZ+QBLW46NPrpRudZuLyWw9Iz6ObkgNZZPdWVKQyPyYg==}
+  /@tiptap/extension-bubble-menu@2.1.6(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3):
+    resolution: {integrity: sha512-13YDJB19xbDL/SZaPs8NvUAA+w5MIWugP8ByKQeIlL8vlcbiJjqoT77YP6v300DtFyVrnLo/iMJh9RMB4NOnwg==}
     peerDependencies:
       '@tiptap/core': ^2.0.0
       '@tiptap/pm': ^2.0.0
@@ -459,8 +465,8 @@ packages:
       '@tiptap/pm': 2.1.3
     dev: false
 
-  /@tiptap/extension-floating-menu@2.1.3(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3):
-    resolution: {integrity: sha512-aVYLhJRJ6sja0aQ8mNeJ+niQhXTyTlksN5YVy6cal3juyf8dWGl3kzlreD0aFX9dSQEzyjvpcJSJuYZwcVAdFg==}
+  /@tiptap/extension-floating-menu@2.1.6(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3):
+    resolution: {integrity: sha512-Xy4esdjsZlgNxMbBC6+wLoiTfqaqFjuFquqcYEPqzgBizYa15Ww6wIx5+h2K+hzyJkSPI7ZX/rPjKXML8lNteQ==}
     peerDependencies:
       '@tiptap/core': ^2.0.0
       '@tiptap/pm': ^2.0.0
@@ -667,8 +673,8 @@ packages:
       react-dom: ^17.0.0 || ^18.0.0
     dependencies:
       '@tiptap/core': 2.1.3(@tiptap/pm@2.1.3)
-      '@tiptap/extension-bubble-menu': 2.1.3(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3)
-      '@tiptap/extension-floating-menu': 2.1.3(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3)
+      '@tiptap/extension-bubble-menu': 2.1.6(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3)
+      '@tiptap/extension-floating-menu': 2.1.6(@tiptap/core@2.1.3)(@tiptap/pm@2.1.3)
       '@tiptap/pm': 2.1.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)

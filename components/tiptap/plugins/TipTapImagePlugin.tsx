@@ -62,7 +62,7 @@ const TipTapImagePlugin = ({ editor, iconClass }: imageProps) => {
   }, [editor])
   return (
     <div className=''>
-      <TipTapMenuButton onClick={toggleDialogue} tooltip='Add Image'>
+      <TipTapMenuButton onClick={addImage} tooltip='Add Image'>
         <RiImage2Fill className={`${iconClass}`} />
       </TipTapMenuButton>
 
