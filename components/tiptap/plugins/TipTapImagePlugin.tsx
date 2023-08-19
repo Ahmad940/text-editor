@@ -85,9 +85,9 @@ const TipTapImagePlugin = ({ editor, iconClass }: imageProps) => {
 
       {/* <div className=''> */}
       {showDialogue && (
-        <div className='fixed bg-black/40 top-0 bottom-0 left-0 right-0 z-[1000] shadow-neutral-800'>
+        <div className='fixed bg-black/40 top-0 bottom-0 left-0 right-0 z-[99999] shadow-neutral-800'>
           <div
-            className={`fixed top-1/2 left-1/2 transform bg-white shadow-lg -translate-x-1/2 -translate-y-1/2`}
+            className={`fixed top-1/2 left-1/2 transform bg-white shadow-lg -translate-x-1/2 -translate-y-1/2 z-[99999]`}
           >
             <div className='shadow shadow-gray-500 flex flex-col flex-1 justify-center items-center'>
               <div className='flex flex-1 flex-col px-2 py-2'>

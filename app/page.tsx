@@ -57,6 +57,8 @@ export default function Home() {
             </div>
           </div>
         )}
+
+        {editorContent}
       </div>
     </>
   )
